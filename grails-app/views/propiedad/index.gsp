@@ -24,7 +24,15 @@
 			<thead>
 					<tr>
 					
-						<g:sortableColumn property="direccion" title="${message(code: 'propiedad.direccion.label', default: 'Direccion')}" />
+						<g:sortableColumn property="barrio" title="${message(code: 'propiedad.barrio.label', default: 'Barrio')}" />
+					
+						<g:sortableColumn property="bloque" title="${message(code: 'propiedad.bloque.label', default: 'Bloque')}" />
+					
+						<g:sortableColumn property="calle" title="${message(code: 'propiedad.calle.label', default: 'Calle')}" />
+					
+						<g:sortableColumn property="departamento" title="${message(code: 'propiedad.departamento.label', default: 'Departamento')}" />
+					
+						<g:sortableColumn property="numero" title="${message(code: 'propiedad.numero.label', default: 'Numero')}" />
 					
 						<g:sortableColumn property="ph" title="${message(code: 'propiedad.ph.label', default: 'Ph')}" />
 					
@@ -34,7 +42,15 @@
 				<g:each in="${propiedadInstanceList}" status="i" var="propiedadInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${propiedadInstance.id}">${fieldValue(bean: propiedadInstance, field: "direccion")}</g:link></td>
+						<td><g:link action="show" id="${propiedadInstance.id}">${fieldValue(bean: propiedadInstance, field: "barrio")}</g:link></td>
+					
+						<td>${fieldValue(bean: propiedadInstance, field: "bloque")}</td>
+					
+						<td>${fieldValue(bean: propiedadInstance, field: "calle")}</td>
+					
+						<td>${fieldValue(bean: propiedadInstance, field: "departamento")}</td>
+					
+						<td>${fieldValue(bean: propiedadInstance, field: "numero")}</td>
 					
 						<td>${fieldValue(bean: propiedadInstance, field: "ph")}</td>
 					
