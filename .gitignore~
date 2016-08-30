@@ -1,8 +1,14 @@
 /target
 .classpath
 .gitignore
+<<<<<<< HEAD
 .gitignore~
 .idea/
 .project
 inmobAdmin/.idea/workspace.xml
 inmobAdminBack-grailsPlugins.iml
+=======
+.idea/
+.project
+
+>>>>>>> 1d24b22e7026ed83b38553b17d9678e8b9545306
