@@ -1,0 +1,8 @@
+.classpath
+.project
+target
+.settings
+.externalToolBuilders/
+atlassian-ide-plugin.xml
+.factorypath
+*.iml
