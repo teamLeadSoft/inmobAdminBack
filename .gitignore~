@@ -1,0 +1,8 @@
+/target
+.classpath
+.gitignore
+.gitignore~
+.idea/
+.project
+inmobAdmin/.idea/workspace.xml
+inmobAdminBack-grailsPlugins.iml
