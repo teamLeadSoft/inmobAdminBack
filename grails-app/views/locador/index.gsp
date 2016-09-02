@@ -32,6 +32,8 @@
 					
 						<g:sortableColumn property="nombre" title="${message(code: 'locador.nombre.label', default: 'Nombre')}" />
 					
+						<g:sortableColumn property="nombreFantasia" title="${message(code: 'locador.nombreFantasia.label', default: 'Nombre Fantasia')}" />
+					
 						<g:sortableColumn property="telefono" title="${message(code: 'locador.telefono.label', default: 'Telefono')}" />
 					
 					</tr>
@@ -47,6 +49,8 @@
 						<td>${fieldValue(bean: locadorInstance, field: "email")}</td>
 					
 						<td>${fieldValue(bean: locadorInstance, field: "nombre")}</td>
+					
+						<td>${fieldValue(bean: locadorInstance, field: "nombreFantasia")}</td>
 					
 						<td>${fieldValue(bean: locadorInstance, field: "telefono")}</td>
 					

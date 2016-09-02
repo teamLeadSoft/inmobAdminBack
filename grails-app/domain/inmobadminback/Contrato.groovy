@@ -15,8 +15,12 @@ class Contrato {
     Locador locador
     Locatario locatario
     Propiedad propiedad
-    List<Garante> garante
+    List<Garante> garanteList
 
     static constraints = {
+    }
+
+    String toString() {
+        "${numero+" "+propiedad.toString()}"
     }
 }

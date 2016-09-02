@@ -59,6 +59,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${locadorInstance?.nombreFantasia}">
+				<li class="fieldcontain">
+					<span id="nombreFantasia-label" class="property-label"><g:message code="locador.nombreFantasia.label" default="Nombre Fantasia" /></span>
+					
+						<span class="property-value" aria-labelledby="nombreFantasia-label"><g:fieldValue bean="${locadorInstance}" field="nombreFantasia"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${locadorInstance?.propiedad}">
 				<li class="fieldcontain">
 					<span id="propiedad-label" class="property-label"><g:message code="locador.propiedad.label" default="Propiedad" /></span>
