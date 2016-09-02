@@ -38,12 +38,30 @@
 
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: locadorInstance, field: 'nombreFantasia', 'error')} required">
+	<label for="nombreFantasia">
+		<g:message code="locador.nombreFantasia.label" default="Nombre Fantasia" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="nombreFantasia" required="" value="${locadorInstance?.nombreFantasia}"/>
+
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: locadorInstance, field: 'propiedad', 'error')} ">
 	<label for="propiedad">
 		<g:message code="locador.propiedad.label" default="Propiedad" />
 		
 	</label>
-	<g:select name="propiedad" from="${inmobadminback.Propiedad.list()}" multiple="multiple" optionKey="id" size="5" value="${locadorInstance?.propiedad*.id}" class="many-to-many"/>
+	
+<ul class="one-to-many">
+<g:each in="${locadorInstance?.propiedad?}" var="p">
+    <li><g:link controller="propiedad" action="show" id="${p.id}">${p?.encodeAsHTML()}</g:link></li>
+</g:each>
+<li class="add">
+<g:link controller="propiedad" action="create" params="['locador.id': locadorInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'propiedad.label', default: 'Propiedad')])}</g:link>
+</li>
+</ul>
+
 
 </div>
 

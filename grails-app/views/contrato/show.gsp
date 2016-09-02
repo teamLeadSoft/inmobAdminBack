@@ -50,6 +50,17 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${contratoInstance?.garante}">
+				<li class="fieldcontain">
+					<span id="garante-label" class="property-label"><g:message code="contrato.garante.label" default="Garante" /></span>
+					
+						<g:each in="${contratoInstance.garante}" var="g">
+						<span class="property-value" aria-labelledby="garante-label"><g:link controller="garante" action="show" id="${g.id}">${g?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${contratoInstance?.locador}">
 				<li class="fieldcontain">
 					<span id="locador-label" class="property-label"><g:message code="contrato.locador.label" default="Locador" /></span>

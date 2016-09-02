@@ -26,6 +26,8 @@
 					
 						<g:sortableColumn property="apellido" title="${message(code: 'garante.apellido.label', default: 'Apellido')}" />
 					
+						<th><g:message code="garante.contrato.label" default="Contrato" /></th>
+					
 						<g:sortableColumn property="dni" title="${message(code: 'garante.dni.label', default: 'Dni')}" />
 					
 						<g:sortableColumn property="email" title="${message(code: 'garante.email.label', default: 'Email')}" />
@@ -41,6 +43,8 @@
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
 						<td><g:link action="show" id="${garanteInstance.id}">${fieldValue(bean: garanteInstance, field: "apellido")}</g:link></td>
+					
+						<td>${fieldValue(bean: garanteInstance, field: "contrato")}</td>
 					
 						<td>${fieldValue(bean: garanteInstance, field: "dni")}</td>
 					
