@@ -32,9 +32,9 @@
 					
 						<g:sortableColumn property="departamento" title="${message(code: 'propiedad.departamento.label', default: 'Departamento')}" />
 					
-						<g:sortableColumn property="numero" title="${message(code: 'propiedad.numero.label', default: 'Numero')}" />
+						<th><g:message code="propiedad.locador.label" default="Locador" /></th>
 					
-						<g:sortableColumn property="ph" title="${message(code: 'propiedad.ph.label', default: 'Ph')}" />
+						<g:sortableColumn property="numero" title="${message(code: 'propiedad.numero.label', default: 'Numero')}" />
 					
 					</tr>
 				</thead>
@@ -50,9 +50,9 @@
 					
 						<td>${fieldValue(bean: propiedadInstance, field: "departamento")}</td>
 					
-						<td>${fieldValue(bean: propiedadInstance, field: "numero")}</td>
+						<td>${fieldValue(bean: propiedadInstance, field: "locador")}</td>
 					
-						<td>${fieldValue(bean: propiedadInstance, field: "ph")}</td>
+						<td>${fieldValue(bean: propiedadInstance, field: "numero")}</td>
 					
 					</tr>
 				</g:each>

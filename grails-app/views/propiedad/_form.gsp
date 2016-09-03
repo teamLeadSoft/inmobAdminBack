@@ -38,6 +38,15 @@
 
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: propiedadInstance, field: 'locador', 'error')} required">
+	<label for="locador">
+		<g:message code="propiedad.locador.label" default="Locador" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:select id="locador" name="locador.id" from="${inmobadminback.Locador.list()}" optionKey="id" required="" value="${propiedadInstance?.locador?.id}" class="many-to-one"/>
+
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: propiedadInstance, field: 'numero', 'error')} required">
 	<label for="numero">
 		<g:message code="propiedad.numero.label" default="Numero" />

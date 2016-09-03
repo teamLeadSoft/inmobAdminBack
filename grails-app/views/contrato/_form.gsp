@@ -29,6 +29,24 @@
 
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: contratoInstance, field: 'garante', 'error')} ">
+	<label for="garante">
+		<g:message code="contrato.garante.label" default="Garante" />
+		
+	</label>
+	
+<ul class="one-to-many">
+<g:each in="${contratoInstance?.garante?}" var="g">
+    <li><g:link controller="garante" action="show" id="${g.id}">${g?.encodeAsHTML()}</g:link></li>
+</g:each>
+<li class="add">
+<g:link controller="garante" action="create" params="['contrato.id': contratoInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'garante.label', default: 'Garante')])}</g:link>
+</li>
+</ul>
+
+
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: contratoInstance, field: 'locador', 'error')} required">
 	<label for="locador">
 		<g:message code="contrato.locador.label" default="Locador" />

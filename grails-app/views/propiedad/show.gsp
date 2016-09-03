@@ -59,6 +59,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${propiedadInstance?.locador}">
+				<li class="fieldcontain">
+					<span id="locador-label" class="property-label"><g:message code="propiedad.locador.label" default="Locador" /></span>
+					
+						<span class="property-value" aria-labelledby="locador-label"><g:link controller="locador" action="show" id="${propiedadInstance?.locador?.id}">${propiedadInstance?.locador?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${propiedadInstance?.numero}">
 				<li class="fieldcontain">
 					<span id="numero-label" class="property-label"><g:message code="propiedad.numero.label" default="Numero" /></span>
