@@ -23,38 +23,11 @@
 			</g:if>
 			<ol class="property-list propiedad">
 			
-				<g:if test="${propiedadInstance?.barrio}">
-				<li class="fieldcontain">
-					<span id="barrio-label" class="property-label"><g:message code="propiedad.barrio.label" default="Barrio" /></span>
-					
-						<span class="property-value" aria-labelledby="barrio-label"><g:fieldValue bean="${propiedadInstance}" field="barrio"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${propiedadInstance?.bloque}">
-				<li class="fieldcontain">
-					<span id="bloque-label" class="property-label"><g:message code="propiedad.bloque.label" default="Bloque" /></span>
-					
-						<span class="property-value" aria-labelledby="bloque-label"><g:fieldValue bean="${propiedadInstance}" field="bloque"/></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${propiedadInstance?.calle}">
 				<li class="fieldcontain">
 					<span id="calle-label" class="property-label"><g:message code="propiedad.calle.label" default="Calle" /></span>
 					
 						<span class="property-value" aria-labelledby="calle-label"><g:fieldValue bean="${propiedadInstance}" field="calle"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${propiedadInstance?.departamento}">
-				<li class="fieldcontain">
-					<span id="departamento-label" class="property-label"><g:message code="propiedad.departamento.label" default="Departamento" /></span>
-					
-						<span class="property-value" aria-labelledby="departamento-label"><g:fieldValue bean="${propiedadInstance}" field="departamento"/></span>
 					
 				</li>
 				</g:if>
@@ -73,6 +46,33 @@
 					<span id="ph-label" class="property-label"><g:message code="propiedad.ph.label" default="Ph" /></span>
 					
 						<span class="property-value" aria-labelledby="ph-label"><g:fieldValue bean="${propiedadInstance}" field="ph"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${propiedadInstance?.barrio}">
+				<li class="fieldcontain">
+					<span id="barrio-label" class="property-label"><g:message code="propiedad.barrio.label" default="Barrio" /></span>
+					
+						<span class="property-value" aria-labelledby="barrio-label"><g:fieldValue bean="${propiedadInstance}" field="barrio"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${propiedadInstance?.bloque}">
+				<li class="fieldcontain">
+					<span id="bloque-label" class="property-label"><g:message code="propiedad.bloque.label" default="Bloque" /></span>
+					
+						<span class="property-value" aria-labelledby="bloque-label"><g:fieldValue bean="${propiedadInstance}" field="bloque"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${propiedadInstance?.departamento}">
+				<li class="fieldcontain">
+					<span id="departamento-label" class="property-label"><g:message code="propiedad.departamento.label" default="Departamento" /></span>
+					
+						<span class="property-value" aria-labelledby="departamento-label"><g:fieldValue bean="${propiedadInstance}" field="departamento"/></span>
 					
 				</li>
 				</g:if>

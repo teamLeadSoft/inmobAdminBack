@@ -9,5 +9,9 @@ class Parte {
     String email
 
     static constraints = {
+        nombre blank: false
+        apellido blank : false
+        telefono blank: false
+        email(blank: false, email: true)
     }
 }

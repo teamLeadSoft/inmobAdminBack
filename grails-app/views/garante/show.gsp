@@ -23,6 +23,15 @@
 			</g:if>
 			<ol class="property-list garante">
 			
+				<g:if test="${garanteInstance?.nombre}">
+				<li class="fieldcontain">
+					<span id="nombre-label" class="property-label"><g:message code="garante.nombre.label" default="Nombre" /></span>
+					
+						<span class="property-value" aria-labelledby="nombre-label"><g:fieldValue bean="${garanteInstance}" field="nombre"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${garanteInstance?.apellido}">
 				<li class="fieldcontain">
 					<span id="apellido-label" class="property-label"><g:message code="garante.apellido.label" default="Apellido" /></span>
@@ -32,11 +41,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${garanteInstance?.dni}">
+				<g:if test="${garanteInstance?.telefono}">
 				<li class="fieldcontain">
-					<span id="dni-label" class="property-label"><g:message code="garante.dni.label" default="Dni" /></span>
+					<span id="telefono-label" class="property-label"><g:message code="garante.telefono.label" default="Telefono" /></span>
 					
-						<span class="property-value" aria-labelledby="dni-label"><g:fieldValue bean="${garanteInstance}" field="dni"/></span>
+						<span class="property-value" aria-labelledby="telefono-label"><g:fieldValue bean="${garanteInstance}" field="telefono"/></span>
 					
 				</li>
 				</g:if>
@@ -50,20 +59,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${garanteInstance?.nombre}">
+				<g:if test="${garanteInstance?.dni}">
 				<li class="fieldcontain">
-					<span id="nombre-label" class="property-label"><g:message code="garante.nombre.label" default="Nombre" /></span>
+					<span id="dni-label" class="property-label"><g:message code="garante.dni.label" default="Dni" /></span>
 					
-						<span class="property-value" aria-labelledby="nombre-label"><g:fieldValue bean="${garanteInstance}" field="nombre"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${garanteInstance?.telefono}">
-				<li class="fieldcontain">
-					<span id="telefono-label" class="property-label"><g:message code="garante.telefono.label" default="Telefono" /></span>
-					
-						<span class="property-value" aria-labelledby="telefono-label"><g:fieldValue bean="${garanteInstance}" field="telefono"/></span>
+						<span class="property-value" aria-labelledby="dni-label"><g:fieldValue bean="${garanteInstance}" field="dni"/></span>
 					
 				</li>
 				</g:if>

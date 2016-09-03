@@ -23,6 +23,15 @@
 			</g:if>
 			<ol class="property-list parte">
 			
+				<g:if test="${parteInstance?.nombre}">
+				<li class="fieldcontain">
+					<span id="nombre-label" class="property-label"><g:message code="parte.nombre.label" default="Nombre" /></span>
+					
+						<span class="property-value" aria-labelledby="nombre-label"><g:fieldValue bean="${parteInstance}" field="nombre"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${parteInstance?.apellido}">
 				<li class="fieldcontain">
 					<span id="apellido-label" class="property-label"><g:message code="parte.apellido.label" default="Apellido" /></span>
@@ -32,11 +41,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${parteInstance?.dni}">
+				<g:if test="${parteInstance?.telefono}">
 				<li class="fieldcontain">
-					<span id="dni-label" class="property-label"><g:message code="parte.dni.label" default="Dni" /></span>
+					<span id="telefono-label" class="property-label"><g:message code="parte.telefono.label" default="Telefono" /></span>
 					
-						<span class="property-value" aria-labelledby="dni-label"><g:fieldValue bean="${parteInstance}" field="dni"/></span>
+						<span class="property-value" aria-labelledby="telefono-label"><g:fieldValue bean="${parteInstance}" field="telefono"/></span>
 					
 				</li>
 				</g:if>
@@ -50,20 +59,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${parteInstance?.nombre}">
+				<g:if test="${parteInstance?.dni}">
 				<li class="fieldcontain">
-					<span id="nombre-label" class="property-label"><g:message code="parte.nombre.label" default="Nombre" /></span>
+					<span id="dni-label" class="property-label"><g:message code="parte.dni.label" default="Dni" /></span>
 					
-						<span class="property-value" aria-labelledby="nombre-label"><g:fieldValue bean="${parteInstance}" field="nombre"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${parteInstance?.telefono}">
-				<li class="fieldcontain">
-					<span id="telefono-label" class="property-label"><g:message code="parte.telefono.label" default="Telefono" /></span>
-					
-						<span class="property-value" aria-labelledby="telefono-label"><g:fieldValue bean="${parteInstance}" field="telefono"/></span>
+						<span class="property-value" aria-labelledby="dni-label"><g:fieldValue bean="${parteInstance}" field="dni"/></span>
 					
 				</li>
 				</g:if>

@@ -29,6 +29,15 @@
 
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: contratoInstance, field: 'garante', 'error')} ">
+	<label for="garante">
+		<g:message code="contrato.garante.label" default="Garante" />
+		
+	</label>
+	<g:select name="garante" from="${inmobadminback.Garante.list()}" multiple="multiple" optionKey="id" size="5" value="${contratoInstance?.garante*.id}" class="many-to-many"/>
+
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: contratoInstance, field: 'locador', 'error')} required">
 	<label for="locador">
 		<g:message code="contrato.locador.label" default="Locador" />

@@ -24,17 +24,17 @@
 			<thead>
 					<tr>
 					
+						<g:sortableColumn property="nombre" title="${message(code: 'locador.nombre.label', default: 'Nombre')}" />
+					
 						<g:sortableColumn property="apellido" title="${message(code: 'locador.apellido.label', default: 'Apellido')}" />
 					
-						<g:sortableColumn property="dni" title="${message(code: 'locador.dni.label', default: 'Dni')}" />
+						<g:sortableColumn property="telefono" title="${message(code: 'locador.telefono.label', default: 'Telefono')}" />
 					
 						<g:sortableColumn property="email" title="${message(code: 'locador.email.label', default: 'Email')}" />
 					
-						<g:sortableColumn property="nombre" title="${message(code: 'locador.nombre.label', default: 'Nombre')}" />
+						<g:sortableColumn property="dni" title="${message(code: 'locador.dni.label', default: 'Dni')}" />
 					
 						<g:sortableColumn property="nombreFantasia" title="${message(code: 'locador.nombreFantasia.label', default: 'Nombre Fantasia')}" />
-					
-						<g:sortableColumn property="telefono" title="${message(code: 'locador.telefono.label', default: 'Telefono')}" />
 					
 					</tr>
 				</thead>
@@ -42,17 +42,17 @@
 				<g:each in="${locadorInstanceList}" status="i" var="locadorInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${locadorInstance.id}">${fieldValue(bean: locadorInstance, field: "apellido")}</g:link></td>
+						<td><g:link action="show" id="${locadorInstance.id}">${fieldValue(bean: locadorInstance, field: "nombre")}</g:link></td>
 					
-						<td>${fieldValue(bean: locadorInstance, field: "dni")}</td>
+						<td>${fieldValue(bean: locadorInstance, field: "apellido")}</td>
+					
+						<td>${fieldValue(bean: locadorInstance, field: "telefono")}</td>
 					
 						<td>${fieldValue(bean: locadorInstance, field: "email")}</td>
 					
-						<td>${fieldValue(bean: locadorInstance, field: "nombre")}</td>
+						<td>${fieldValue(bean: locadorInstance, field: "dni")}</td>
 					
 						<td>${fieldValue(bean: locadorInstance, field: "nombreFantasia")}</td>
-					
-						<td>${fieldValue(bean: locadorInstance, field: "telefono")}</td>
 					
 					</tr>
 				</g:each>

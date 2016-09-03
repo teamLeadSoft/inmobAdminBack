@@ -23,6 +23,15 @@
 			</g:if>
 			<ol class="property-list locador">
 			
+				<g:if test="${locadorInstance?.nombre}">
+				<li class="fieldcontain">
+					<span id="nombre-label" class="property-label"><g:message code="locador.nombre.label" default="Nombre" /></span>
+					
+						<span class="property-value" aria-labelledby="nombre-label"><g:fieldValue bean="${locadorInstance}" field="nombre"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${locadorInstance?.apellido}">
 				<li class="fieldcontain">
 					<span id="apellido-label" class="property-label"><g:message code="locador.apellido.label" default="Apellido" /></span>
@@ -32,11 +41,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${locadorInstance?.dni}">
+				<g:if test="${locadorInstance?.telefono}">
 				<li class="fieldcontain">
-					<span id="dni-label" class="property-label"><g:message code="locador.dni.label" default="Dni" /></span>
+					<span id="telefono-label" class="property-label"><g:message code="locador.telefono.label" default="Telefono" /></span>
 					
-						<span class="property-value" aria-labelledby="dni-label"><g:fieldValue bean="${locadorInstance}" field="dni"/></span>
+						<span class="property-value" aria-labelledby="telefono-label"><g:fieldValue bean="${locadorInstance}" field="telefono"/></span>
 					
 				</li>
 				</g:if>
@@ -50,11 +59,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${locadorInstance?.nombre}">
+				<g:if test="${locadorInstance?.dni}">
 				<li class="fieldcontain">
-					<span id="nombre-label" class="property-label"><g:message code="locador.nombre.label" default="Nombre" /></span>
+					<span id="dni-label" class="property-label"><g:message code="locador.dni.label" default="Dni" /></span>
 					
-						<span class="property-value" aria-labelledby="nombre-label"><g:fieldValue bean="${locadorInstance}" field="nombre"/></span>
+						<span class="property-value" aria-labelledby="dni-label"><g:fieldValue bean="${locadorInstance}" field="dni"/></span>
 					
 				</li>
 				</g:if>
@@ -75,15 +84,6 @@
 						<g:each in="${locadorInstance.propiedad}" var="p">
 						<span class="property-value" aria-labelledby="propiedad-label"><g:link controller="propiedad" action="show" id="${p.id}">${p?.encodeAsHTML()}</g:link></span>
 						</g:each>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${locadorInstance?.telefono}">
-				<li class="fieldcontain">
-					<span id="telefono-label" class="property-label"><g:message code="locador.telefono.label" default="Telefono" /></span>
-					
-						<span class="property-value" aria-labelledby="telefono-label"><g:fieldValue bean="${locadorInstance}" field="telefono"/></span>
 					
 				</li>
 				</g:if>

@@ -23,6 +23,15 @@
 			</g:if>
 			<ol class="property-list locatario">
 			
+				<g:if test="${locatarioInstance?.nombre}">
+				<li class="fieldcontain">
+					<span id="nombre-label" class="property-label"><g:message code="locatario.nombre.label" default="Nombre" /></span>
+					
+						<span class="property-value" aria-labelledby="nombre-label"><g:fieldValue bean="${locatarioInstance}" field="nombre"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${locatarioInstance?.apellido}">
 				<li class="fieldcontain">
 					<span id="apellido-label" class="property-label"><g:message code="locatario.apellido.label" default="Apellido" /></span>
@@ -32,11 +41,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${locatarioInstance?.dni}">
+				<g:if test="${locatarioInstance?.telefono}">
 				<li class="fieldcontain">
-					<span id="dni-label" class="property-label"><g:message code="locatario.dni.label" default="Dni" /></span>
+					<span id="telefono-label" class="property-label"><g:message code="locatario.telefono.label" default="Telefono" /></span>
 					
-						<span class="property-value" aria-labelledby="dni-label"><g:fieldValue bean="${locatarioInstance}" field="dni"/></span>
+						<span class="property-value" aria-labelledby="telefono-label"><g:fieldValue bean="${locatarioInstance}" field="telefono"/></span>
 					
 				</li>
 				</g:if>
@@ -50,20 +59,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${locatarioInstance?.nombre}">
+				<g:if test="${locatarioInstance?.dni}">
 				<li class="fieldcontain">
-					<span id="nombre-label" class="property-label"><g:message code="locatario.nombre.label" default="Nombre" /></span>
+					<span id="dni-label" class="property-label"><g:message code="locatario.dni.label" default="Dni" /></span>
 					
-						<span class="property-value" aria-labelledby="nombre-label"><g:fieldValue bean="${locatarioInstance}" field="nombre"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${locatarioInstance?.telefono}">
-				<li class="fieldcontain">
-					<span id="telefono-label" class="property-label"><g:message code="locatario.telefono.label" default="Telefono" /></span>
-					
-						<span class="property-value" aria-labelledby="telefono-label"><g:fieldValue bean="${locatarioInstance}" field="telefono"/></span>
+						<span class="property-value" aria-labelledby="dni-label"><g:fieldValue bean="${locatarioInstance}" field="dni"/></span>
 					
 				</li>
 				</g:if>

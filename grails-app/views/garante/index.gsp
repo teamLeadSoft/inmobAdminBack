@@ -24,15 +24,15 @@
 			<thead>
 					<tr>
 					
+						<g:sortableColumn property="nombre" title="${message(code: 'garante.nombre.label', default: 'Nombre')}" />
+					
 						<g:sortableColumn property="apellido" title="${message(code: 'garante.apellido.label', default: 'Apellido')}" />
 					
-						<g:sortableColumn property="dni" title="${message(code: 'garante.dni.label', default: 'Dni')}" />
+						<g:sortableColumn property="telefono" title="${message(code: 'garante.telefono.label', default: 'Telefono')}" />
 					
 						<g:sortableColumn property="email" title="${message(code: 'garante.email.label', default: 'Email')}" />
 					
-						<g:sortableColumn property="nombre" title="${message(code: 'garante.nombre.label', default: 'Nombre')}" />
-					
-						<g:sortableColumn property="telefono" title="${message(code: 'garante.telefono.label', default: 'Telefono')}" />
+						<g:sortableColumn property="dni" title="${message(code: 'garante.dni.label', default: 'Dni')}" />
 					
 					</tr>
 				</thead>
@@ -40,15 +40,15 @@
 				<g:each in="${garanteInstanceList}" status="i" var="garanteInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${garanteInstance.id}">${fieldValue(bean: garanteInstance, field: "apellido")}</g:link></td>
+						<td><g:link action="show" id="${garanteInstance.id}">${fieldValue(bean: garanteInstance, field: "nombre")}</g:link></td>
 					
-						<td>${fieldValue(bean: garanteInstance, field: "dni")}</td>
+						<td>${fieldValue(bean: garanteInstance, field: "apellido")}</td>
+					
+						<td>${fieldValue(bean: garanteInstance, field: "telefono")}</td>
 					
 						<td>${fieldValue(bean: garanteInstance, field: "email")}</td>
 					
-						<td>${fieldValue(bean: garanteInstance, field: "nombre")}</td>
-					
-						<td>${fieldValue(bean: garanteInstance, field: "telefono")}</td>
+						<td>${fieldValue(bean: garanteInstance, field: "dni")}</td>
 					
 					</tr>
 				</g:each>

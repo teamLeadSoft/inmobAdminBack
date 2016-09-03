@@ -11,6 +11,9 @@ class Propiedad {
     String ph
 
     static constraints = {
+        calle blank: false
+        numero blank: false
+        ph blank: false
     }
     String toString() {
         "${calle+" "+numero+" PH: "+ph}"

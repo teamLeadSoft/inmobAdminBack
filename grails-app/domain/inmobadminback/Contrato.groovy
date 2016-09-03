@@ -3,19 +3,17 @@ package inmobadminback
 class Contrato {
 
     int numero
+    int periodoIncremento
+    float montoContrato
+    float porcentajeIncremento
     Date fechaInicio
     Date fechaFin
     Date cierreFacturacion
-
-    float montoContrato
-
-    int periodoIncremento
-    float porcentajeIncremento
-
     Locador locador
     Locatario locatario
     Propiedad propiedad
-    List<Garante> garanteList
+
+    static hasMany = [garante : Garante]
 
     static constraints = {
     }
