@@ -50,6 +50,7 @@
       <excludeFolder url="file://$MODULE_DIR$/target/work/process-lock" />
       <excludeFolder url="file://$MODULE_DIR$/target/work/resources" />
       <excludeFolder url="file://$MODULE_DIR$/target/work/scriptCache" />
+      <excludeFolder url="file://$MODULE_DIR$/target/work/stage" />
       <excludeFolder url="file://$MODULE_DIR$/target/work/tomcat" />
     </content>
     <orderEntry type="inheritedJdk" />
@@ -88,6 +89,9 @@
           <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-jasper/7.0.55/tomcat-embed-jasper-7.0.55.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-catalina-ant/7.0.55/tomcat-catalina-ant-7.0.55.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/org/postgresql/postgresql/9.3-1100-jdbc41/postgresql-9.3-1100-jdbc41.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/javax/mail/javax.mail-api/1.5.1/javax.mail-api-1.5.1.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/javax/activation/activation/1.1/activation-1.1.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/com/sun/mail/javax.mail/1.5.1/javax.mail-1.5.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
@@ -99,6 +103,7 @@
           <root url="jar://$MAVEN_REPOSITORY$/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.0.0.Final/jboss-transaction-api_1.2_spec-1.0.0.Final-sources.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/classmate/1.0.0/classmate-1.0.0-sources.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/org/mozilla/rhino/1.7R4/rhino-1.7R4-sources.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/javax/activation/activation/1.1/activation-1.1-sources.jar!/" />
         </SOURCES>
         <jarDirectory url="file://$MODULE_DIR$/lib" recursive="false" />
       </library>
