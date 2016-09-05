@@ -6,7 +6,7 @@ class Propiedad {
     int numero
     String bloque
     int piso
-    int departamento
+    String departamento
     String barrio
     String ph
 
