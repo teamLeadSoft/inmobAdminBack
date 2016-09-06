@@ -85,11 +85,12 @@
 		<div id="page-body" role="main">
 			<div id="controller-list" role="navigation">
 				<ul>
-					<li><a href="/inmobAdminBack/contrato/index">Contrato</a></li>
-					<li><a href="/inmobAdminBack/garante/index">Garante</a></li>
-					<li><a href="/inmobAdminBack/locador/index">Locador</a></li>
-					<li><a href="/inmobAdminBack/locatario/index">Locatario</a></li>
-					<li><a href="/inmobAdminBack/propiedad/index">Propiedad</a></li>
+					<li><a href="/inmobAdminBack-0.1/contrato/index">Contrato</a></li>
+					<li><a href="/inmobAdminBack-0.1/garante/index">Garante</a></li>
+					<li><a href="/inmobAdminBack-0.1/locador/index">Locador</a></li>
+					<li><a href="/inmobAdminBack-0.1/locatario/index">Locatario</a></li>
+					<li><a href="/inmobAdminBack-0.1/propiedad/index">Propiedad</a></li>
+					<li><a href="/inmobAdminBack-0.1/concepto/index">Propiedad</a></li>
 				</ul>
 			</div>
 		</div>
