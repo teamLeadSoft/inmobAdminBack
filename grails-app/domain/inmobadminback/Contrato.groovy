@@ -8,7 +8,6 @@ class Contrato {
     float porcentajeIncremento
     Date fechaInicio
     Date fechaFin
-    Date cierreFacturacion
     Locador locador
     Locatario locatario
     Propiedad propiedad

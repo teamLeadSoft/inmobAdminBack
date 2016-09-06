@@ -23,15 +23,6 @@
 			</g:if>
 			<ol class="property-list contrato">
 			
-				<g:if test="${contratoInstance?.cierreFacturacion}">
-				<li class="fieldcontain">
-					<span id="cierreFacturacion-label" class="property-label"><g:message code="contrato.cierreFacturacion.label" default="Cierre Facturacion" /></span>
-					
-						<span class="property-value" aria-labelledby="cierreFacturacion-label"><g:formatDate date="${contratoInstance?.cierreFacturacion}" /></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${contratoInstance?.fechaFin}">
 				<li class="fieldcontain">
 					<span id="fechaFin-label" class="property-label"><g:message code="contrato.fechaFin.label" default="Fecha Fin" /></span>

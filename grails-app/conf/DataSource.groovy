@@ -17,7 +17,7 @@ environments {
         dataSource {
             dbCreate = "create" // one of 'create', 'create-drop', 'update', 'validate', ''
             url = "jdbc:postgresql://localhost:5432/inmobAdmin"
-            
+
     //****** Console admin *********
     //           https://api.elephantsql.com/sso/3f9fb311-38c1-471f-a7e5-86b807154d6e/mgmt
     //******************************

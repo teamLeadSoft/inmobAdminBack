@@ -24,8 +24,6 @@
 			<thead>
 					<tr>
 					
-						<g:sortableColumn property="cierreFacturacion" title="${message(code: 'contrato.cierreFacturacion.label', default: 'Cierre Facturacion')}" />
-					
 						<g:sortableColumn property="fechaFin" title="${message(code: 'contrato.fechaFin.label', default: 'Fecha Fin')}" />
 					
 						<g:sortableColumn property="fechaInicio" title="${message(code: 'contrato.fechaInicio.label', default: 'Fecha Inicio')}" />
@@ -36,15 +34,15 @@
 					
 						<g:sortableColumn property="montoContrato" title="${message(code: 'contrato.montoContrato.label', default: 'Monto Contrato')}" />
 					
+						<g:sortableColumn property="numero" title="${message(code: 'contrato.numero.label', default: 'Numero')}" />
+					
 					</tr>
 				</thead>
 				<tbody>
 				<g:each in="${contratoInstanceList}" status="i" var="contratoInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${contratoInstance.id}">${fieldValue(bean: contratoInstance, field: "cierreFacturacion")}</g:link></td>
-					
-						<td><g:formatDate date="${contratoInstance.fechaFin}" /></td>
+						<td><g:link action="show" id="${contratoInstance.id}">${fieldValue(bean: contratoInstance, field: "fechaFin")}</g:link></td>
 					
 						<td><g:formatDate date="${contratoInstance.fechaInicio}" /></td>
 					
@@ -53,6 +51,8 @@
 						<td>${fieldValue(bean: contratoInstance, field: "locatario")}</td>
 					
 						<td>${fieldValue(bean: contratoInstance, field: "montoContrato")}</td>
+					
+						<td>${fieldValue(bean: contratoInstance, field: "numero")}</td>
 					
 					</tr>
 				</g:each>

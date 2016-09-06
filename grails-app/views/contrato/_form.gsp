@@ -2,15 +2,6 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: contratoInstance, field: 'cierreFacturacion', 'error')} required">
-	<label for="cierreFacturacion">
-		<g:message code="contrato.cierreFacturacion.label" default="Cierre Facturacion" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:datePicker name="cierreFacturacion" precision="day"  value="${contratoInstance?.cierreFacturacion}"  />
-
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: contratoInstance, field: 'fechaFin', 'error')} required">
 	<label for="fechaFin">
 		<g:message code="contrato.fechaFin.label" default="Fecha Fin" />
