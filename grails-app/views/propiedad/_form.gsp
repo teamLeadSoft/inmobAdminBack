@@ -52,7 +52,7 @@
 		<g:message code="propiedad.departamento.label" default="Departamento" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field name="departamento" type="number" value="${propiedadInstance.departamento}" required=""/>
+	<g:textField name="departamento" required="" value="${propiedadInstance?.departamento}"/>
 
 </div>
 

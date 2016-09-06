@@ -12,19 +12,8 @@ class GaranteController {
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
-
-        envMail("gonzalo.garay.soft@gmail.com", "asunto", "mensaje")
-
         params.max = Math.min(max ?: 10, 100)
         respond Garante.list(params), model:[garanteInstanceCount: Garante.count()]
-    }
-
-    private void envMail(String toArg, String subjectArg, String bodyArg) {
-        sendMail {
-            to toArg
-            subject subjectArg
-            body bodyArg
-        }
     }
 
     def show(Garante garanteInstance) {
@@ -111,6 +100,16 @@ class GaranteController {
                 redirect action: "index", method: "GET"
             }
             '*'{ render status: NOT_FOUND }
+        }
+    }
+
+    private void envMail(String toArg, String subjectArg, String bodyArg) {
+//        envMail("gonzalo.garay.soft@gmail.com", "asunto", "mensaje")
+
+        sendMail {
+            to toArg
+            subject subjectArg
+            body bodyArg
         }
     }
 }

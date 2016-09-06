@@ -17,6 +17,23 @@ environments {
         dataSource {
             dbCreate = "create" // one of 'create', 'create-drop', 'update', 'validate', ''
             url = "jdbc:postgresql://localhost:5432/inmobAdmin"
+            
+    //****** Console admin *********
+    //           https://api.elephantsql.com/sso/3f9fb311-38c1-471f-a7e5-86b807154d6e/mgmt
+    //******************************
+    //
+    //           url = "jdbc:postgresql://horton.elephantsql.com:5432/phykqetk"
+    //            username = "phykqetk"
+    //            password = "iknU1OiaPZusph5aWgu3PnpeepUAd3DS"
+    //            properties {
+    //                maxActive = 1
+    //                numTestsPerEvictionRun=3
+    //                testOnBorrow=true
+    //                testWhileIdle=true
+    //                testOnReturn=false
+    //                validationQuery="SELECT 1"
+    //                jdbcInterceptors="ConnectionState"
+    //            }
         }
     }
     test {
