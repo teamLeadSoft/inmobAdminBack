@@ -61,7 +61,9 @@
 		<g:message code="locador.propiedad.label" default="Propiedad" />
 		
 	</label>
-	<g:select name="propiedad" from="${inmobadminback.Propiedad.list()}" multiple="multiple" optionKey="id" size="5" value="${locadorInstance?.propiedad*.id}" class="many-to-many"/>
-
+	<g:if test="${inmobadminback.Propiedad.list()}">
+		<g:select name="propiedad" from="${inmobadminback.Propiedad.list()}" multiple="multiple" optionKey="id" size="5" value="${locadorInstance?.propiedad*.id}" class="many-to-many"/>
+	</g:if>
+		<g:link controller="propiedad" action="create">Agregar propiedad</g:link>
 </div>
 
