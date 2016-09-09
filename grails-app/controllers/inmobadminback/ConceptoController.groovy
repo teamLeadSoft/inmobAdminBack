@@ -64,15 +64,13 @@ class ConceptoController {
 
         conceptoInstance.save flush:true
 
-        redirect(controller:"contrato", action: "create")
-
-//        request.withFormat {
-//            form multipartForm {
-//                flash.message = message(code: 'default.updated.message', args: [message(code: 'Concepto.label', default: 'Concepto'), conceptoInstance.id])
-//                redirect conceptoInstance
-//            }
-//            '*'{ respond conceptoInstance, [status: OK] }
-//        }
+        request.withFormat {
+            form multipartForm {
+                flash.message = message(code: 'default.updated.message', args: [message(code: 'Concepto.label', default: 'Concepto'), conceptoInstance.id])
+                redirect conceptoInstance
+            }
+            '*'{ respond conceptoInstance, [status: OK] }
+        }
     }
 
     @Transactional

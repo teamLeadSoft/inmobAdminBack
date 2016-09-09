@@ -101,4 +101,8 @@ class LocatarioController {
             '*'{ render status: NOT_FOUND }
         }
     }
+
+    def reporte(){
+        chain(controller: "jasper", action: "index", model: [data: Locatario.list()], params:params)
+    }
 }
