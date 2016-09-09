@@ -1,13 +1,12 @@
 <%@ page import="inmobadminback.Concepto" %>
 
 
-
-<div class="fieldcontain ${hasErrors(bean: conceptoInstance, field: 'cuotas', 'error')} required">
-	<label for="cuotas">
-		<g:message code="concepto.cuotas.label" default="Cuotas" />
+<div class="fieldcontain ${hasErrors(bean: conceptoInstance, field: 'descripcion', 'error')} required">
+	<label for="descripcion">
+		<g:message code="concepto.descripcion.label" default="Descripcion" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field name="cuotas" type="number" value="${conceptoInstance.cuotas}" required=""/>
+	<g:textField name="descripcion" required="" value="${conceptoInstance?.descripcion}"/>
 
 </div>
 
@@ -38,3 +37,11 @@
 
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: conceptoInstance, field: 'cuotas', 'error')} required">
+	<label for="cuotas">
+		<g:message code="concepto.cuotas.label" default="Cuotas" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:field name="cuotas" type="number" value="${conceptoInstance.cuotas}" required=""/>
+
+</div>

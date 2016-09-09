@@ -32,6 +32,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${conceptoInstance?.descripcion}">
+				<li class="fieldcontain">
+					<span id="descripcion-label" class="property-label"><g:message code="concepto.descripcion.label" default="Descripcion" /></span>
+					
+						<span class="property-value" aria-labelledby="descripcion-label"><g:fieldValue bean="${conceptoInstance}" field="descripcion"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${conceptoInstance?.inicio}">
 				<li class="fieldcontain">
 					<span id="inicio-label" class="property-label"><g:message code="concepto.inicio.label" default="Inicio" /></span>

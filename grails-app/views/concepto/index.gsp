@@ -26,6 +26,8 @@
 					
 						<g:sortableColumn property="cuotas" title="${message(code: 'concepto.cuotas.label', default: 'Cuotas')}" />
 					
+						<g:sortableColumn property="descripcion" title="${message(code: 'concepto.descripcion.label', default: 'Descripcion')}" />
+					
 						<g:sortableColumn property="inicio" title="${message(code: 'concepto.inicio.label', default: 'Inicio')}" />
 					
 						<g:sortableColumn property="isCredito" title="${message(code: 'concepto.isCredito.label', default: 'Is Credito')}" />
@@ -39,6 +41,8 @@
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
 						<td><g:link action="show" id="${conceptoInstance.id}">${fieldValue(bean: conceptoInstance, field: "cuotas")}</g:link></td>
+					
+						<td>${fieldValue(bean: conceptoInstance, field: "descripcion")}</td>
 					
 						<td><g:formatDate date="${conceptoInstance.inicio}" /></td>
 					
