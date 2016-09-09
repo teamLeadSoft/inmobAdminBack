@@ -7,8 +7,6 @@ class Concepto {
     float monto
     boolean isCredito
 
-    Contrato contrato
-
     static constraints = {
     }
 }

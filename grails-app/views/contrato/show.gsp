@@ -23,6 +23,17 @@
 			</g:if>
 			<ol class="property-list contrato">
 			
+				<g:if test="${contratoInstance?.concepto}">
+				<li class="fieldcontain">
+					<span id="concepto-label" class="property-label"><g:message code="contrato.concepto.label" default="Concepto" /></span>
+					
+						<g:each in="${contratoInstance.concepto}" var="c">
+						<span class="property-value" aria-labelledby="concepto-label"><g:link controller="concepto" action="show" id="${c.id}">${c?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${contratoInstance?.fechaFin}">
 				<li class="fieldcontain">
 					<span id="fechaFin-label" class="property-label"><g:message code="contrato.fechaFin.label" default="Fecha Fin" /></span>

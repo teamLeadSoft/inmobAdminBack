@@ -12,7 +12,8 @@ class Contrato {
     Locatario locatario
     Propiedad propiedad
 
-    static hasMany = [garante : Garante]
+    static hasMany = [garante : Garante,
+                      concepto: Concepto]
 
     static constraints = {
     }

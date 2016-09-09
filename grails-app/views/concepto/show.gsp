@@ -23,15 +23,6 @@
 			</g:if>
 			<ol class="property-list concepto">
 			
-				<g:if test="${conceptoInstance?.contrato}">
-				<li class="fieldcontain">
-					<span id="contrato-label" class="property-label"><g:message code="concepto.contrato.label" default="Contrato" /></span>
-					
-						<span class="property-value" aria-labelledby="contrato-label"><g:link controller="contrato" action="show" id="${conceptoInstance?.contrato?.id}">${conceptoInstance?.contrato?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${conceptoInstance?.cuotas}">
 				<li class="fieldcontain">
 					<span id="cuotas-label" class="property-label"><g:message code="concepto.cuotas.label" default="Cuotas" /></span>

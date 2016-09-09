@@ -24,8 +24,6 @@
 			<thead>
 					<tr>
 					
-						<th><g:message code="concepto.contrato.label" default="Contrato" /></th>
-					
 						<g:sortableColumn property="cuotas" title="${message(code: 'concepto.cuotas.label', default: 'Cuotas')}" />
 					
 						<g:sortableColumn property="inicio" title="${message(code: 'concepto.inicio.label', default: 'Inicio')}" />
@@ -40,9 +38,7 @@
 				<g:each in="${conceptoInstanceList}" status="i" var="conceptoInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${conceptoInstance.id}">${fieldValue(bean: conceptoInstance, field: "contrato")}</g:link></td>
-					
-						<td>${fieldValue(bean: conceptoInstance, field: "cuotas")}</td>
+						<td><g:link action="show" id="${conceptoInstance.id}">${fieldValue(bean: conceptoInstance, field: "cuotas")}</g:link></td>
 					
 						<td><g:formatDate date="${conceptoInstance.inicio}" /></td>
 					

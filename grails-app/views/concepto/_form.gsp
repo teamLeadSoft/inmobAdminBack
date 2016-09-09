@@ -2,15 +2,6 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: conceptoInstance, field: 'contrato', 'error')} required">
-	<label for="contrato">
-		<g:message code="concepto.contrato.label" default="Contrato" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:select id="contrato" name="contrato.id" from="${inmobadminback.Contrato.list()}" optionKey="id" required="" value="${conceptoInstance?.contrato?.id}" class="many-to-one"/>
-
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: conceptoInstance, field: 'cuotas', 'error')} required">
 	<label for="cuotas">
 		<g:message code="concepto.cuotas.label" default="Cuotas" />
