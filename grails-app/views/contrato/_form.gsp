@@ -4,7 +4,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: contratoInstance, field: 'numero', 'error')} required">
 	<label for="numero">
-		<g:message code="contrato.numero.label" default="Numero" />
+		<g:message message="Numero de contrato" default="Numero" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:field name="numero" type="number" value="${contratoInstance.numero}" required=""/>
@@ -37,7 +37,7 @@
 	<g:if test="${inmobadminback.Propiedad.list()}">
 		<g:select id="propiedad" name="propiedad.id" from="${inmobadminback.Propiedad.list()}" optionKey="id" required="" value="${contratoInstance?.propiedad?.id}" class="many-to-one"/>
 	</g:if>
-		<g:link controller="propiedad" action="create">Agregar propiedad</g:link>
+	<g:link controller="propiedad" action="create">Agregar propiedad</g:link>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: contratoInstance, field: 'locador', 'error')} required">
@@ -48,7 +48,7 @@
 	<g:if test="${inmobadminback.Locador.list()}">
 		<g:select id="locador" name="locador.id" from="${inmobadminback.Locador.list()}" optionKey="id" required="" value="${contratoInstance?.locador?.id}" class="many-to-one"/>
 	</g:if>
-		<g:link controller="locador" action="create">Agregar locador</g:link>
+	<g:link controller="locador" action="create">Agregar locador</g:link>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: contratoInstance, field: 'locatario', 'error')} required">
@@ -59,7 +59,7 @@
 	<g:if test="${inmobadminback.Locatario.list()}">
 		<g:select id="locatario" name="locatario.id" from="${inmobadminback.Locatario.list()}" optionKey="id" required="" value="${contratoInstance?.locatario?.id}" class="many-to-one"/>
 	</g:if>
-		<g:link controller="locatario" action="create">Agregar locatario</g:link>
+	<g:link controller="locatario" action="create">Agregar locatario</g:link>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: contratoInstance, field: 'garante', 'error')} ">
@@ -70,15 +70,24 @@
 	<g:if test="${inmobadminback.Garante.list()}">
 		<g:select name="garante" from="${inmobadminback.Garante.list()}" multiple="multiple" optionKey="id" size="5" value="${contratoInstance?.garante*.id}" class="many-to-many"/>
 	</g:if>
-		<g:link controller="garante" action="create">Agregar garante</g:link>
+	<g:link controller="garante" action="create">Agregar garante</g:link>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: contratoInstance, field: 'montoContrato', 'error')} required">
-	<label for="montoContrato">
-		<g:message code="contrato.montoContrato.label" default="Monto Contrato" />
+<div class="fieldcontain ${hasErrors(bean: contratoInstance, field: 'montoMensualContrato', 'error')} required">
+	<label for="montoMensualContrato">
+		<g:message code="contrato.montoMensualContrato.label" default="Monto Mensual Contrato" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field name="montoContrato" value="${fieldValue(bean: contratoInstance, field: 'montoContrato')}" required=""/>
+	<g:field name="montoMensualContrato" value="${fieldValue(bean: contratoInstance, field: 'montoMensualContrato')}" required=""/>
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: contratoInstance, field: 'montoTotalContrato', 'error')} required">
+	<label for="montoTotalContrato">
+		<g:message code="contrato.montoTotalContrato.label" default="Monto Total Contrato" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:field name="montoTotalContrato" value="${fieldValue(bean: contratoInstance, field: 'montoTotalContrato')}" required=""/>
 
 </div>
 
@@ -108,6 +117,6 @@
 	<g:if test="${inmobadminback.Concepto.list()}">
 		<g:select name="concepto" from="${inmobadminback.Concepto.list()}" multiple="multiple" optionKey="id" size="5" value="${conceptoInstance?.garante*.id}" class="many-to-many"/>
 	</g:if>
-		<g:link controller="concepto" action="create">Agregar concepto</g:link>
+	<g:link controller="concepto" action="create">Agregar concepto</g:link>
 </div>
 

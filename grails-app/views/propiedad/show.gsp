@@ -59,15 +59,6 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${propiedadInstance?.bloque}">
-				<li class="fieldcontain">
-					<span id="bloque-label" class="property-label"><g:message code="propiedad.bloque.label" default="Bloque" /></span>
-					
-						<span class="property-value" aria-labelledby="bloque-label"><g:fieldValue bean="${propiedadInstance}" field="bloque"/></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${propiedadInstance?.departamento}">
 				<li class="fieldcontain">
 					<span id="departamento-label" class="property-label"><g:message code="propiedad.departamento.label" default="Departamento" /></span>
@@ -82,6 +73,15 @@
 					<span id="piso-label" class="property-label"><g:message code="propiedad.piso.label" default="Piso" /></span>
 					
 						<span class="property-value" aria-labelledby="piso-label"><g:fieldValue bean="${propiedadInstance}" field="piso"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${propiedadInstance?.torre}">
+				<li class="fieldcontain">
+					<span id="torre-label" class="property-label"><g:message code="propiedad.torre.label" default="Torre" /></span>
+					
+						<span class="property-value" aria-labelledby="torre-label"><g:fieldValue bean="${propiedadInstance}" field="torre"/></span>
 					
 				</li>
 				</g:if>
