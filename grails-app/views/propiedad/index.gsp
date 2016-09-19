@@ -32,9 +32,9 @@
 					
 						<g:sortableColumn property="barrio" title="${message(code: 'propiedad.barrio.label', default: 'Barrio')}" />
 					
-						<g:sortableColumn property="bloque" title="${message(code: 'propiedad.bloque.label', default: 'Bloque')}" />
-					
 						<g:sortableColumn property="departamento" title="${message(code: 'propiedad.departamento.label', default: 'Departamento')}" />
+					
+						<g:sortableColumn property="piso" title="${message(code: 'propiedad.piso.label', default: 'Piso')}" />
 					
 					</tr>
 				</thead>
@@ -50,9 +50,9 @@
 					
 						<td>${fieldValue(bean: propiedadInstance, field: "barrio")}</td>
 					
-						<td>${fieldValue(bean: propiedadInstance, field: "bloque")}</td>
-					
 						<td>${fieldValue(bean: propiedadInstance, field: "departamento")}</td>
+					
+						<td>${fieldValue(bean: propiedadInstance, field: "piso")}</td>
 					
 					</tr>
 				</g:each>

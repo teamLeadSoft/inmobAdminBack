@@ -32,9 +32,9 @@
 					
 						<th><g:message code="contrato.locatario.label" default="Locatario" /></th>
 					
-						<g:sortableColumn property="montoContrato" title="${message(code: 'contrato.montoContrato.label', default: 'Monto Contrato')}" />
+						<g:sortableColumn property="montoMensualContrato" title="${message(code: 'contrato.montoMensualContrato.label', default: 'Monto Mensual Contrato')}" />
 					
-						<g:sortableColumn property="numero" title="${message(code: 'contrato.numero.label', default: 'Numero')}" />
+						<g:sortableColumn property="montoTotalContrato" title="${message(code: 'contrato.montoTotalContrato.label', default: 'Monto Total Contrato')}" />
 					
 					</tr>
 				</thead>
@@ -50,9 +50,9 @@
 					
 						<td>${fieldValue(bean: contratoInstance, field: "locatario")}</td>
 					
-						<td>${fieldValue(bean: contratoInstance, field: "montoContrato")}</td>
+						<td>${fieldValue(bean: contratoInstance, field: "montoMensualContrato")}</td>
 					
-						<td>${fieldValue(bean: contratoInstance, field: "numero")}</td>
+						<td>${fieldValue(bean: contratoInstance, field: "montoTotalContrato")}</td>
 					
 					</tr>
 				</g:each>
