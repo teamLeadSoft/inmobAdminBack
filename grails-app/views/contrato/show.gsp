@@ -81,11 +81,20 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${contratoInstance?.montoContrato}">
+				<g:if test="${contratoInstance?.montoMensualContrato}">
 				<li class="fieldcontain">
-					<span id="montoContrato-label" class="property-label"><g:message code="contrato.montoContrato.label" default="Monto Contrato" /></span>
+					<span id="montoMensualContrato-label" class="property-label"><g:message code="contrato.montoMensualContrato.label" default="Monto Mensual Contrato" /></span>
 					
-						<span class="property-value" aria-labelledby="montoContrato-label"><g:fieldValue bean="${contratoInstance}" field="montoContrato"/></span>
+						<span class="property-value" aria-labelledby="montoMensualContrato-label"><g:fieldValue bean="${contratoInstance}" field="montoMensualContrato"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${contratoInstance?.montoTotalContrato}">
+				<li class="fieldcontain">
+					<span id="montoTotalContrato-label" class="property-label"><g:message code="contrato.montoTotalContrato.label" default="Monto Total Contrato" /></span>
+					
+						<span class="property-value" aria-labelledby="montoTotalContrato-label"><g:fieldValue bean="${contratoInstance}" field="montoTotalContrato"/></span>
 					
 				</li>
 				</g:if>

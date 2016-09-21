@@ -4,7 +4,7 @@ class Propiedad {
 
     String calle
     int numero
-    String bloque
+    String torre
     int piso
     String departamento
     String barrio

@@ -4,7 +4,8 @@ class Contrato {
 
     int numero
     int periodoIncremento
-    float montoContrato
+    float montoTotalContrato
+    float montoMensualContrato
     float porcentajeIncremento
     Date fechaInicio
     Date fechaFin

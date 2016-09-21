@@ -38,15 +38,6 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: propiedadInstance, field: 'bloque', 'error')} required">
-	<label for="bloque">
-		<g:message code="propiedad.bloque.label" default="Bloque" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="bloque" required="" value="${propiedadInstance?.bloque}"/>
-
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: propiedadInstance, field: 'departamento', 'error')} required">
 	<label for="departamento">
 		<g:message code="propiedad.departamento.label" default="Departamento" />
@@ -62,6 +53,15 @@
 		<span class="required-indicator">*</span>
 	</label>
 	<g:field name="piso" type="number" value="${propiedadInstance.piso}" required=""/>
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: propiedadInstance, field: 'torre', 'error')} required">
+	<label for="torre">
+		<g:message code="propiedad.torre.label" default="Torre" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="torre" required="" value="${propiedadInstance?.torre}"/>
 
 </div>
 
