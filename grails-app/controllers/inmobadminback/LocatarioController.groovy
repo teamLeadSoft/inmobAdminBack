@@ -1,12 +1,14 @@
 package inmobadminback
 
-
+import inmobadminback.utils.Reporter
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
 @Transactional(readOnly = true)
 class LocatarioController {
+
+    Reporter reporter
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
@@ -102,7 +104,14 @@ class LocatarioController {
         }
     }
 
-    def reporte(){
-        chain(controller: "jasper", action: "index", model: [data: Locatario.list()], params:params)
+    @Transactional
+    def reporte(String dni){
+        Locatario locatario = Locatario.findByDni(dni);
+        Contrato contrato = Contrato.findByLocatario(locatario)
+        reporter = new Reporter()
+        List<Recibo> listRecibo = new ArrayList()
+        listRecibo.add(reporter.generarReporte(contrato))
+
+        chain(controller: "jasper", action: "index", model: [data:listRecibo], params:params)
     }
 }

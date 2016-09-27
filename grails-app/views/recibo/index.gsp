@@ -24,15 +24,17 @@
 			<thead>
 					<tr>
 					
-						<th><g:message code="recibo.contrato.label" default="Contrato" /></th>
+						<g:sortableColumn property="año" title="${message(code: 'recibo.año.label', default: 'Año')}" />
 					
-						<g:sortableColumn property="esAbonado" title="${message(code: 'recibo.esAbonado.label', default: 'Es Abonado')}" />
+						<g:sortableColumn property="ciudad" title="${message(code: 'recibo.ciudad.label', default: 'Ciudad')}" />
 					
-						<g:sortableColumn property="esActivo" title="${message(code: 'recibo.esActivo.label', default: 'Es Activo')}" />
+						<g:sortableColumn property="comporbanteMesGas" title="${message(code: 'recibo.comporbanteMesGas.label', default: 'Comporbante Mes Gas')}" />
 					
-						<g:sortableColumn property="fechaCreacion" title="${message(code: 'recibo.fechaCreacion.label', default: 'Fecha Creacion')}" />
+						<g:sortableColumn property="comporbanteMesMunicipal" title="${message(code: 'recibo.comporbanteMesMunicipal.label', default: 'Comporbante Mes Municipal')}" />
 					
-						<g:sortableColumn property="reciboJson" title="${message(code: 'recibo.reciboJson.label', default: 'Recibo Json')}" />
+						<g:sortableColumn property="comprobanteMesAgua" title="${message(code: 'recibo.comprobanteMesAgua.label', default: 'Comprobante Mes Agua')}" />
+					
+						<g:sortableColumn property="comprobanteMesExpensas" title="${message(code: 'recibo.comprobanteMesExpensas.label', default: 'Comprobante Mes Expensas')}" />
 					
 					</tr>
 				</thead>
@@ -40,15 +42,17 @@
 				<g:each in="${reciboInstanceList}" status="i" var="reciboInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${reciboInstance.id}">${fieldValue(bean: reciboInstance, field: "contrato")}</g:link></td>
+						<td><g:link action="show" id="${reciboInstance.id}">${fieldValue(bean: reciboInstance, field: "año")}</g:link></td>
 					
-						<td><g:formatBoolean boolean="${reciboInstance.esAbonado}" /></td>
+						<td>${fieldValue(bean: reciboInstance, field: "ciudad")}</td>
 					
-						<td><g:formatBoolean boolean="${reciboInstance.esActivo}" /></td>
+						<td>${fieldValue(bean: reciboInstance, field: "comporbanteMesGas")}</td>
 					
-						<td><g:formatDate date="${reciboInstance.fechaCreacion}" /></td>
+						<td>${fieldValue(bean: reciboInstance, field: "comporbanteMesMunicipal")}</td>
 					
-						<td>${fieldValue(bean: reciboInstance, field: "reciboJson")}</td>
+						<td>${fieldValue(bean: reciboInstance, field: "comprobanteMesAgua")}</td>
+					
+						<td>${fieldValue(bean: reciboInstance, field: "comprobanteMesExpensas")}</td>
 					
 					</tr>
 				</g:each>
